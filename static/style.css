@@ -1,0 +1,55 @@
+.graph {
+  width: 100%;
+  height: 500px;
+}
+
+.graph-wrapper {
+  background-color: rgb(41, 47, 57);
+}
+
+.graph-title {
+  text-align: center;
+}
+
+.container {
+  background-color: rgb(57, 63, 71);
+  /*color: rgb(255, 255, 255);*/
+  /*background-image: linear-gradient(to right, rgb(64, 67, 151), rgb(123, 45, 87));*/
+}
+
+body {
+  background-color: rgb(57, 63, 71);
+  color: rgb(231, 231, 231);
+  /*background-image: linear-gradient(to right, rgb(64, 67, 151), rgb(123, 45, 87));*/
+}
+
+.jumbotron {
+  background-image: linear-gradient(to right, rgb(64, 67, 151), rgb(123, 45, 87));
+  /*color: rgb(255, 255, 255);*/
+}
+
+.panel {
+  background-color: rgb(41, 47, 57);
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+}
+
+h2 {
+  font-family: 'Raleway', sans-serif;
+}
+h3 {
+  font-family: 'Raleway', sans-serif;
+}
+h4 {
+  font-family: 'Raleway', sans-serif;
+}
+h5 {
+  font-family: 'Raleway', sans-serif;
+}
+h6 {
+  font-family: 'Raleway', sans-serif;
+}

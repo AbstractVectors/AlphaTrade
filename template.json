@@ -2,8 +2,7 @@
     "lookback": {
         "startDate": "",
         "endDate": "",
-        "step": "",
-        "rollingLookback": ""
+        "step": ""
     },
     "tradeStructure": {
         "long": [

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head lang='en'>
+        <meta charset="utf-8">
+        <title>Volidity</title>
+        <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+        <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/registration">Register</a></li>
+                    <li><a href="/dashboard/{identity}">Dashboard</a></li>
+                    <li class="active"><a href="/view/{identity}">View</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="jumbotron text-center"><h1 class="text-capitalize fontbold whitecolor">Financial Strategy Dashboard</h1></div>
+        <div class="container">
+            <hr>
+            <div class="panel panel-default">
+              <h3>Page Structure</h3>
+              <ul>
+                  <li>Name: {{ strategy['name'] }}</li>
+                  <li>Lookback:</li>
+                  <ul>
+                      <li>Start Date: {{ strategy['lookback']['startDate'] }}</li>
+                      <li>End Date: {{ strategy['lookback']['startDate'] }}</li>
+                      <li>Step: {{ strategy['lookback']['startDate'] }}</li>
+                  </ul>
+                  <li>Trade Structure</li>
+                  <ul>
+                    <li>Long</li>
+                   <ul>{% for ts in strategy['tradeStructure']['long'] %}
+                        <li>Ticker: {{ ts['ticker'] }}</li>
+                        <li>Execution: {{ ts['execution'] }}</li>
+                        <li>Order: {{ ts['riskManagement']['order'] }}</li>
+                        <li>Take Profit: {{ ts['riskManagement']['takeProfit'] }}</li>
+                        <li>Stop Loss: {{ ts['riskManagement']['stopLoss'] }}</li>
+                        <li>Market on Close: {{ ts['riskManagement']['marketOnClose'] }}</li>
+                    {% endfor %}</ul>
+                    <li>Short</li>
+                    <ul>{% for ts in strategy['tradeStructure']['short'] %}
+                        <li>Ticker: {{ ts['ticker'] }}</li>
+                        <li>Execution: {{ ts['execution'] }}</li>
+                        <li>Order: {{ ts['riskManagement']['order'] }}</li>
+                        <li>Take Profit: {{ ts['riskManagement']['takeProfit'] }}</li>
+                        <li>Stop Loss: {{ ts['riskManagement']['stopLoss'] }}</li>
+                        <li>Market on Close: {{ ts['riskManagement']['marketOnClose'] }}</li>
+                    {% endfor %}</ul>
+                  </ul>
+                  <li>Signals</li>
+              </ul>
+            </div>
+            <hr>
+            <div class="graph-wrapper">
+                <br>
+                <div class="graph-title"><h3>Profit and Loss vs Time Chart</h3></div>
+                <div id="pnlTime" class="graph"></div>
+            </div>
+            <hr>
+            <div class="graph-wrapper">
+                <br>
+                <div class="graph-title"><h3>Cumulative Sum vs Time Chart</h3></div>
+                <div id="cumSumTime" class="graph"></div>
+            </div>
+            <hr>
+            <div class="graph-wrapper">
+                <br>
+                <div class="graph-title"><h3>Signals vs Time Chart</h3></div>
+                <div id="signalTime" class="graph"></div>
+            </div>
+            <hr>
+            <div class="graph-wrapper">
+                <br>
+                <div class="graph-title"><h3>Bar Chart</h3></div>
+                <div id="barChart" class="graph"></div>
+            </div>
+            <hr>
+        </div>
+        <script src="//cdn.amcharts.com/lib/4/core.js"></script>
+        <script src="//cdn.amcharts.com/lib/4/charts.js"></script>
+        <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+        <script src="https://cdn.amcharts.com/lib/4/themes/kelly.js"></script>
+        <script src="{{ url_for('static', filename='graph.js') }}"></script>
+        <script type="text/javascript">
+            let dataframe = extract({{ datafame|tojson }});
+            console.log(dataframe);
+            sigmaGraph();
+        </script>
+    </body>
+</html>
