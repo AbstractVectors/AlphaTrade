@@ -27,6 +27,11 @@ body {
   /*background-image: linear-gradient(to right, rgb(64, 67, 151), rgb(123, 45, 87));*/
 }
 
+.navbar {
+  background-color: rgb(57, 63, 71);
+  color: rgb(231, 231, 231);
+}
+
 
 
 .jumbotron {

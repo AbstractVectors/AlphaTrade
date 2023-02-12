@@ -117,9 +117,9 @@ def dashboard(identity):
                     'execution': form['execution{}'.format(index)],
                     'riskManagement': {
                         'order': form['order{}'.format(index)],
-                        'takeProfit': form['takeProfit{}'.format(index)],
-                        'stopLoss': form['stopLoss{}'.format(index)],
-                        'marketOnClose': form['marketOnClose{}'.format(index)]
+                        'takeProfit': float(form['takeProfit{}'.format(index)]),
+                        'stopLoss': float(form['stopLoss{}'.format(index)]),
+                        'marketOnClose': int(form['marketOnClose{}'.format(index)])
                     }
                 })
             index += 1
@@ -134,7 +134,7 @@ def dashboard(identity):
             symbol_index = 1
             # todo add threshold to html
             while 'sigType_{}_{}'.format(index, symbol_index) in form.keys():
-                if 'sigType_{}_{}'.format(index, symbol_index) == 'positive':
+                if form['sigType_{}_{}'.format(index, symbol_index)] == 'positive':
                     positive.append({
                         'symbol': form['symbols_{}_{}'.format(index, symbol_index)],
                         'multiplier': float(form['multiplier_{}_{}'.format(index, symbol_index)])
