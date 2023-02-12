@@ -439,7 +439,7 @@ $("#submit_btn").click(function() {
 
 
    /* ------ CubePortfolio ------ */
-   /*source gallery*/
+   /*main gallery*/
    $("#portfolio-measonry").cubeportfolio({
       filters: '#measonry-filters',
       loadMoreAction: 'click',
@@ -545,8 +545,8 @@ $("#submit_btn").click(function() {
 
 
    /* ------ Revolution Slider ------ */
-   /*source slider*/
-   $("#banner-source").show().revolution({
+   /*main slider*/ 
+   $("#banner-main").show().revolution({
       sliderType: "standard",
       sliderLayout: "fullscreen",
       scrollbarDrag: "true",

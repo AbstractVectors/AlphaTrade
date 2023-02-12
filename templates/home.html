@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head lang='en'>
         <meta charset="utf-8">
         <title>Volidity</title>
         <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+        <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     </head>
     <body>
         <nav class="navbar navbar-default">
@@ -15,22 +16,19 @@
                 </ul>
             </div>
         </nav>
-                <div class="tp-caption tp-resizeme"
-                  data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
-                  data-y="['middle','middle','middle','middle']" data-voffset="['-140','-140','-140','-140']"
-                  data-whitespace="nowrap" data-responsive_offset="on"
-                  data-width="['none','none','none','none']" data-type="text"
-                  data-textalign="['center','center','center','center']"
-                  data-transform_idle="o:1;"
-                  data-transform_in="x:-50px;opacity:0;s:2000;e:Power3.easeOut;"
-                  data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
-                  data-start="1000" data-splitin="none" data-splitout="none">
-                    <h1 class="text-capitalize font-xlight whitecolor">Volidity</h1>
-                </div>
-
+        <div class="jumbotron text-center"><h1>AlphaTrade</h1></div>
         <div class="container">
-            <!--todo add more info on homepage-->
-            <p>Welcome to the Volidity! Test your investment strategy!</p>
+            <h2>1. Create Financial Strategy</h2>
+            <p>Name your first financial strategy!</p>
+            <hr>
+            <h2>2. Lookback</h2>
+            <p>Enter a start and end date for your trading strategy and specific time intervals between checks.</p>
+            <hr>
+            <h2>3. Trade Structure</h2>
+            <p>Enter your trade structures! We support long and short trades, and market and limit executions. We also support orders within risk management: one cancels other, stop loss, and market on close.</p>
+            <hr>
+            <h2>4. Signals</h2>
+            <p>Enter indicators needed as triggers for buying/selling. We support symbols for different indicators, multipliers, trigger types, time filters, and many more features.</p>
         </div>
     </body>
 </html>

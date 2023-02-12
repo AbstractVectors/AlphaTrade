@@ -4,6 +4,8 @@
         <meta charset="utf-8">
         <title>Volidity</title>
         <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+        <!--<link rel="stylesheet" href="css/plugins.css">
+        <link rel="stylesheet" href="css/style.css">-->
         <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     </head>
     <body>
@@ -13,8 +15,7 @@
                     <li><a href="/">Home</a></li>
                     <li><a href="/login">Login</a></li>
                     <li><a href="/registration">Register</a></li>
-                    <li><a href="/dashboard/{identity}">Dashboard</a></li>
-                    <li class="active"><a href="/view/{identity}">View</a></li>
+                    <li class="active"><a href="/dashboard/{identity}">Dashboard</a></li>
                 </ul>
             </div>
         </nav>
@@ -72,12 +73,6 @@
                 <br>
                 <div class="graph-title"><h3>Signals vs Time Chart</h3></div>
                 <div id="signalTime" class="graph"></div>
-            </div>
-            <hr>
-            <div class="graph-wrapper">
-                <br>
-                <div class="graph-title"><h3>Bar Chart</h3></div>
-                <div id="barChart" class="graph"></div>
             </div>
             <hr>
         </div>
