@@ -1,0 +1,69 @@
+{
+    "lookback": {
+        "startDate": "",
+        "endDate": "",
+        "step": "",
+        "rollingLookback": ""
+    },
+    "tradeStructure": {
+        "long": [
+            {
+                "ticker": "",
+                "execution": "",
+                "riskManagement": {
+                    "order": "",
+                    "takeProfit": "",
+                    "stopLoss": "",
+                    "marketOnClose": ""
+                }
+            }, 
+            {}
+        ],
+        "short": [
+            {
+                "ticker": "",
+                "execution": "",
+                "riskManagement": {
+                    "order": "",
+                    "takeProfit": "",
+                    "stopLoss": "",
+                    "marketOnClose": ""
+                }
+            },
+            {}
+        ]
+    },
+    "signals": {
+        "indicators": [
+            {
+            "positive": [
+                {
+                    "symbol": "",
+                    "multiplier": ""
+                },
+                {}
+            ],
+            "negative": [
+                {
+                    "symbol": "",
+                    "multiplier": ""
+                },
+                {}
+            ],
+            "aggregation": "",
+            "priceType": "",
+            "thresholdType": "",
+            "threshold": "",
+            "triggerType": "",
+            "triggerBias": "",
+            "timeFilterUnit": "",
+            "timeFilter": ""
+            },
+            {}
+        ]
+    }
+}
+
+
+
+

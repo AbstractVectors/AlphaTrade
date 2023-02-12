@@ -1,0 +1,54 @@
+{
+    "lookback": {
+        "startDate": "09-01-2015",
+        "endDate": "01-01-2023",
+        "step": 1440,
+        "rollingLookbackPeriod": 520
+    },
+    "tradeStructure": {
+        "long": [
+            {
+                "ticker": "USDJPY=X",
+                "execution": "market",
+                "riskManagement": {
+                    "order": "OCO",
+                    "takeProfit": 2.00,
+                    "stopLoss": -1.00,
+                    "marketOnClose": 5
+                }
+            }
+        ],
+        "short": []
+    },
+    "signals": {
+        "indicators": [
+            {
+                "positive": [
+                    {
+                        "symbol": "USGG10YR Index",
+                        "multiplier": 1.0
+                    }
+                ],
+                "negative": [
+                    {
+                        "symbol": "GJGB10 Index",
+                        "multiplier": 1.0
+                    }
+                ],
+                "aggregation": "sum",
+                "priceType": "absolute",
+                "thresholdType": "zscore",
+                "threshold": 1.0,
+                "triggerType": "filter",
+                "triggerBias": "above",
+                "timeFilterUnit": "month",
+                "timeFilter": [-2]
+            }
+        ],
+        "combination": 1
+    }
+}
+
+
+
+
